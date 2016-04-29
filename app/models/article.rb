@@ -7,5 +7,5 @@ class Article < ActiveRecord::Base
 
 	#scopes
 	scope :alphabetical, -> { order('title') }
-	scope :active, -> { active: true }
+	scope :active, -> { where(active: true) }
 end
